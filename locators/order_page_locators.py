@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 class FirstForm:
     name = (By.XPATH, "//input[@placeholder='* Имя']")
     surname = (By.XPATH, "//input[@placeholder='* Фамилия']")
-    addres = (By.XPATH, "//input[@placeholder='* Адрес: куда привезти заказ']")
+    address = (By.XPATH, "//input[@placeholder='* Адрес: куда привезти заказ']")
     station = (By.XPATH, "//input[@placeholder='* Станция метро']")
     click_station = (By.CLASS_NAME, "select-search__select")
     phone = (By.XPATH, "//input[@placeholder='* Телефон: на него позвонит курьер']")

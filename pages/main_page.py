@@ -1,12 +1,18 @@
+from pages.base_page import *
 import allure
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+
 
 
 class SectionQuestions:
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 3)
+        self.base_page = BasePage(self.driver)
+
+    def click_cookie_accept(self):
+        self.base_page.click_cookie_accept()
 
     @allure.step('Клик по вопросу')
     def click_question(self, question):

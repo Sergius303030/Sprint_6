@@ -15,21 +15,6 @@ class BasePage:
     def click_cookie_accept(self):
         self.driver.find_element(*MainPage.button_coockie_confirm).click()
 
-    @allure.step('Клик по верхней кнопке "Заказать"')
-    def click_button_order_header(self):
-        self.wait.until(EC.element_to_be_clickable(MainPage.button_order_header))
-        self.driver.find_element(*MainPage.button_order_header).click()
-
-    @allure.step('Скролл до нижней кнопки "Заказать"')
-    def scroll_button_order_bottom(self):
-        el = self.driver.find_element(*MainPage.sroll_button_body)
-        self.driver.execute_script('arguments[0].scrollIntoView();', el)
-        self.wait.until(EC.visibility_of_element_located(MainPage.sroll_button_body))
-        self.wait.until(EC.element_to_be_clickable(MainPage.button_order_bottom))
-
-    @allure.step('Клик по нижней кнопке "Заказать"')
-    def click_button_order_bottom(self):
-        self.driver.find_element(*MainPage.button_order_bottom).click()
 
     @allure.step('Клик по логотипу Самоката')
     def click_logo_scooter(self):
